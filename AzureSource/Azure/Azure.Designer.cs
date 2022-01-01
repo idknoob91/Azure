@@ -45,6 +45,7 @@ namespace Azure
             this.fastColoredTextBox1 = new FastColoredTextBoxNS.FastColoredTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button6 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fastColoredTextBox1)).BeginInit();
@@ -99,6 +100,8 @@ namespace Azure
             this.label2.Size = new System.Drawing.Size(27, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "A";
+            this.label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label2_MouseDown);
+            this.label2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label2_MouseMove);
             // 
             // label1
             // 
@@ -109,6 +112,8 @@ namespace Azure
             this.label1.Size = new System.Drawing.Size(38, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Azure";
+            this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
+            this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.label1_MouseMove);
             // 
             // button1
             // 
@@ -197,6 +202,7 @@ namespace Azure
             this.fastColoredTextBox1.CommentPrefix = "--";
             this.fastColoredTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.fastColoredTextBox1.DisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
+            this.fastColoredTextBox1.Font = new System.Drawing.Font("Courier New", 9.75F);
             this.fastColoredTextBox1.ForeColor = System.Drawing.Color.White;
             this.fastColoredTextBox1.IndentBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(70)))), ((int)(((byte)(70)))));
             this.fastColoredTextBox1.IsReplaceMode = false;
@@ -221,22 +227,33 @@ namespace Azure
             this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listBox1.ForeColor = System.Drawing.Color.White;
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(502, 35);
+            this.listBox1.Location = new System.Drawing.Point(502, 66);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(126, 234);
+            this.listBox1.Size = new System.Drawing.Size(131, 195);
             this.listBox1.TabIndex = 8;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(502, 273);
+            this.button6.Location = new System.Drawing.Point(502, 267);
             this.button6.Margin = new System.Windows.Forms.Padding(0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(126, 24);
+            this.button6.Size = new System.Drawing.Size(131, 30);
             this.button6.TabIndex = 7;
             this.button6.Text = "Refresh";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(502, 38);
+            this.button9.Margin = new System.Windows.Forms.Padding(0);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(131, 27);
+            this.button9.TabIndex = 9;
+            this.button9.Text = "Settings";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Azure
             // 
@@ -244,6 +261,7 @@ namespace Azure
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(640, 304);
+            this.Controls.Add(this.button9);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.fastColoredTextBox1);
@@ -278,6 +296,7 @@ namespace Azure
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button9;
     }
 }
 

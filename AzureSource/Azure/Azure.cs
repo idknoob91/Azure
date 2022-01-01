@@ -109,5 +109,39 @@ namespace Azure
             Functions.PopulateListBox(listBox1, "./Scripts", "*.txt");
             Functions.PopulateListBox(listBox1, "./Scripts", "*.lua");
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Settings openform = new Settings();
+            openform.Show();
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
+
+        private void label2_MouseDown(object sender, MouseEventArgs e)
+        {
+            lastPoint = new Point(e.X, e.Y);
+        }
+
+        private void label2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                this.Left += e.X - lastPoint.X;
+                this.Top += e.Y - lastPoint.Y;
+            }
+        }
     }
 }
